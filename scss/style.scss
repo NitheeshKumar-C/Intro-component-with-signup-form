@@ -1,0 +1,243 @@
+
+// ## Colors
+    // ### Primary
+    $Red: hsl(0, 100%, 74%);
+    $Green: hsl(154, 59%, 51%);
+    // ### Accent
+    $Blue: hsl(248, 32%, 49%);
+    // ### Neutral
+    $darkBlue: hsl(249, 10%, 26%,.3) ;
+    $grayishBlue: hsl(246, 25%, 77%);
+// ## Typography
+    // ### Body Copy
+    $fontSize: 16px;
+    // ### Font
+    $fontFamily: 'Poppins', sans-serif;
+    $fontWeights:("fw400":400, "fw500":500, "fw600":600, "fw700":700);
+
+$backgroundImg:url("../images/bg-intro-desktop.png");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $Red;
+    background-image: $backgroundImg;
+    color: white;
+    font-family: $fontFamily;
+}
+.main-section{
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+// first-section
+.first-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div{
+        // max-width: 60%;
+        h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-weight: map-get($fontWeights, "fw700");
+        }
+        p{
+            font-weight: map-get($fontWeights, "fw500");
+            color: white;
+            line-height: 1.5;
+        }
+    }
+}
+
+// user-action-div or right section
+.price-info-div{
+    margin:0 auto 25px auto;
+    background-color: $Blue;
+    padding: 20px 10px;
+    border-radius: 10px;
+    h4{
+        text-align: center;
+        span{
+            font-weight: map-get($fontWeights, "fw400");
+        }
+    }
+    box-shadow: 0 5px 0px 1px  $darkBlue;
+}
+.user-action-div{
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.input-div{
+    div{
+        margin:0 auto 10px auto;
+        position: relative;
+        // max-width: 80%;
+        input{
+            width: 100%;
+            padding: 15px 20px;
+            outline: none;
+            border: 2px solid $grayishBlue;
+            border-radius: 5px;
+            font-weight: map-get($fontWeights,"fw600");
+            &::placeholder{
+                color: $grayishBlue;
+            }
+            &:focus{
+                border: 2px solid black;
+            }
+        }
+        p{
+            visibility: hidden;
+            margin-top: 5px;
+            font-size: 12px;
+            text-align: right;
+            color: $Red;
+        }
+        .icon-error,.fa-circle-check{
+            color: green;
+            visibility: hidden;
+            right: 3%;
+            position: absolute;
+            top: 50%;
+            margin-top: -23px; 
+        }
+        .fa-circle-check{
+            margin-top: -20px; 
+        }
+    }
+}
+.button-div{
+    text-align: center;
+    button{
+        color: white;
+        text-transform: uppercase;
+        background-color: $Green;
+        padding: 20px 20px;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: map-get($fontWeights,"fw700");
+        border: none;
+        border-radius: 5px;
+        &:hover{
+            cursor: pointer;
+            background-color: hsl(154, 59%, 51%,.8);
+            color: whitesmoke;
+        }
+    }
+}
+.tc{
+    margin: 10px auto;
+    p{
+        text-align: center;
+        color: $grayishBlue;
+        font-size: 13px;
+        a{
+            color: $Red;
+            text-decoration: none;
+            font-weight: map-get($fontWeights, "fw600");
+        }
+    }
+}
+@media only screen and (min-width:1440px){
+    .first-section{
+        div{
+            h1{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width:1700px){
+    .main-section{
+        max-width: 70%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .first-section{
+        div{
+            h1{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    .main-section{
+        margin-top: 30px;
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .first-section{
+        margin-bottom: 2rem;
+        div{
+            
+            h1{
+                text-align: center;
+                font-size: 3rem;
+            }
+            p{
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 450px) {
+    .main-section{
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .first-section{
+        margin-bottom: 2rem;
+        div{
+            
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+    .user-action-div{
+        padding: 20px;
+    }
+    .button-div{
+        button{
+            padding: 15px 15px;
+            width: 100%;
+            font-size: .8rem;
+        }
+    }
+    footer{
+        text-align: center;
+        font-size: .7rem;
+    }
+}
+footer{
+    text-align: center;
+    line-height: 1.5;
+    font-weight: map-get($fontWeights, "fw500" );
+}

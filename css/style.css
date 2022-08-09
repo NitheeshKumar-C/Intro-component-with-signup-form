@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: hsl(0deg, 100%, 74%);
+  background-image: url("../images/bg-intro-desktop.png");
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-section {
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.first-section div h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.first-section div p {
+  font-weight: 500;
+  color: white;
+  line-height: 1.5;
+}
+
+.price-info-div {
+  margin: 0 auto 25px auto;
+  background-color: hsl(248deg, 32%, 49%);
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 0px 1px hsla(249deg, 10%, 26%, 0.3);
+}
+.price-info-div h4 {
+  text-align: center;
+}
+.price-info-div h4 span {
+  font-weight: 400;
+}
+
+.user-action-div {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.input-div div {
+  margin: 0 auto 10px auto;
+  position: relative;
+}
+.input-div div input {
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  border: 2px solid hsl(246deg, 25%, 77%);
+  border-radius: 5px;
+  font-weight: 600;
+}
+.input-div div input::placeholder {
+  color: hsl(246deg, 25%, 77%);
+}
+.input-div div input:focus {
+  border: 2px solid black;
+}
+.input-div div p {
+  visibility: hidden;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: right;
+  color: hsl(0deg, 100%, 74%);
+}
+.input-div div .icon-error, .input-div div .fa-circle-check {
+  color: green;
+  visibility: hidden;
+  right: 3%;
+  position: absolute;
+  top: 50%;
+  margin-top: -23px;
+}
+.input-div div .fa-circle-check {
+  margin-top: -20px;
+}
+
+.button-div {
+  text-align: center;
+}
+.button-div button {
+  color: white;
+  text-transform: uppercase;
+  background-color: hsl(154deg, 59%, 51%);
+  padding: 20px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}
+.button-div button:hover {
+  cursor: pointer;
+  background-color: hsla(154deg, 59%, 51%, 0.8);
+  color: whitesmoke;
+}
+
+.tc {
+  margin: 10px auto;
+}
+.tc p {
+  text-align: center;
+  color: hsl(246deg, 25%, 77%);
+  font-size: 13px;
+}
+.tc p a {
+  color: hsl(0deg, 100%, 74%);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 1440px) {
+  .first-section div h1 {
+    font-size: 4rem;
+  }
+  .first-section div p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .main-section {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .first-section div h1 {
+    font-size: 4rem;
+  }
+  .first-section div p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .main-section {
+    margin-top: 30px;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .first-section {
+    margin-bottom: 2rem;
+  }
+  .first-section div h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .first-section div p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main-section {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .first-section {
+    margin-bottom: 2rem;
+  }
+  .first-section div h1 {
+    font-size: 1.5rem;
+  }
+  .first-section div p {
+    font-size: 1rem;
+  }
+  .user-action-div {
+    padding: 20px;
+  }
+  .button-div button {
+    padding: 15px 15px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+}
+footer {
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
