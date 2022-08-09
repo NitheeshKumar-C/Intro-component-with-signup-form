@@ -68,6 +68,7 @@ main{
     padding: 20px 10px;
     border-radius: 10px;
     h4{
+        line-height: 1.5;
         text-align: center;
         span{
             font-weight: map-get($fontWeights, "fw400");
@@ -214,7 +215,7 @@ main{
         div{
             
             h1{
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
             p{
                 font-size: 1rem;
@@ -233,10 +234,11 @@ main{
     }
     footer{
         text-align: center;
-        font-size: .7rem;
+        font-size: .9rem;
     }
 }
 footer{
+    margin: 20px 0;
     text-align: center;
     line-height: 1.5;
     font-weight: map-get($fontWeights, "fw500" );

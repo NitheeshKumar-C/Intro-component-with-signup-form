@@ -48,6 +48,7 @@ main {
   box-shadow: 0 5px 0px 1px hsla(249deg, 10%, 26%, 0.3);
 }
 .price-info-div h4 {
+  line-height: 1.5;
   text-align: center;
 }
 .price-info-div h4 span {
@@ -181,7 +182,7 @@ main {
     margin-bottom: 2rem;
   }
   .first-section div h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .first-section div p {
     font-size: 1rem;
@@ -196,10 +197,11 @@ main {
   }
   footer {
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 footer {
+  margin: 20px 0;
   text-align: center;
   line-height: 1.5;
   font-weight: 500;
